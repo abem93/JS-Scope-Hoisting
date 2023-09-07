@@ -33,3 +33,19 @@ function hoistingTest(){
   console.log('test');
 }
 hoistingTest();
+
+// #3 Hoist Challenge
+
+function hoistChallenge(){
+  console.log(typeof fakeFunction);
+  if(true){
+    function fakeFunction(){
+      console.log('fake Function');
+    }
+  }
+
+  console.log(typeof fakeFunction);
+  fakeFunction();
+}
+
+hoistChallenge();
