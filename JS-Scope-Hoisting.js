@@ -11,6 +11,25 @@ function scopeTest(){
   // console.log(block) // not defined
   console.log(global); // 'global'
 }
-
+// console.log(block) // not defined
+// console.log(funcScope); // not defined
+console.log(global); // 'global'
 
 scopeTest()
+
+// #2
+
+hoistingTest()
+function hoistingTest(){
+  fistVar // not defined
+  // secondLet // Cannot access 'secondLet' before initialization
+  //thirdConst // Missing initializer in const declarations
+  var fistVar;
+  let secondLet;
+  const thirdConst = 'const';
+  fistVar;
+  secondLet;
+  thirdConst;
+  console.log('test');
+}
+hoistingTest();
